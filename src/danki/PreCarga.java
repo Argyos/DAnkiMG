@@ -1,0 +1,203 @@
+
+package danki;
+
+
+import java.io.InputStream;
+import java.util.Properties;
+
+public class PreCarga {
+    static String dataFolder = System.getenv("APPDATA"); 
+    public static String _Menu_HowTo;
+    public static String _Menu_Config;
+    public static String _Menu_About;
+    public static String _Pestanas_0;        
+    public static String _Pestanas_1;    
+    public static String _L_Pestanas_0;        
+    public static String _L_Pestanas_1;    
+    public static String _Button_Load;        
+    public static String _B_Refresh;        
+    public static String _Label_Trans;        
+    public static String _Label_Orig;        
+    public static String _Label_Language;        
+    public static String _Label_Type;        
+    public static String _Label_Colour;        
+    public static String _L_Amount;       
+    public static String _Check_Show;  
+    public static String _Title_Config;
+    public static String _Label_CTittle;
+    public static String _Label_CIdioma;
+    public static String _Label_CType;
+    public static String _Label_CColour;
+    public static String _B_Accept;
+    public static String _Idioma0;
+    public static String _Idioma1;
+    public static String _Idioma2;
+    public static String _Idioma3;
+    public static String _B_Search;
+    public static String _L_DeckFields;
+    public static String _Label_CType1;
+    public static String _Label_CColour1;
+    public static String _Label_CIdioma1;
+    public static String _Label_Mostrar;
+    public static String _CType0;
+    public static String _CType1;
+    public static String _CType2;
+    public static String _CType3;
+    public static String _CColour0;
+    public static String _CColour1;
+    public static String _Cidioma0;
+    public static String _Cidioma1;
+    public static String _Cidioma2;
+    public static String _Cidioma3;
+    public static String _Cidioma4;
+    public static String _Cidioma5;
+    public static String _Cidioma6;
+    public static String _Texto0;
+    public static String _Texto1;
+    public static String _Texto1_1;
+    public static String _Texto2;
+    public static String _Texto3_1;
+    public static String _Texto3_2;
+    public static String _Texto4_1;
+    public static String _Texto4_2;
+    public static String _Texto5_1;
+    public static String _Texto5_2;
+    public static String _About;
+    public static String _Title_Search;
+    public static String _Ch_Descarga;
+    public static String _T_Guardar;
+    public static String _Body_Err;
+    public static String _T_Abrir;
+    public static String _Alert1;
+    public static String _Alert2;
+    public static String _T_Content;
+    public static String _Browser1;
+    public static String _Browser2;
+    public static String _Report;
+    public static String _Cancel;
+    public static String _Update;
+    public static String _Ava;
+    public static String _New;
+    public static String _BrowserT;
+    public static String _BrowserCB;
+    public static String _HowI;
+    public static String _Btn_Campos; //
+    public static String _Label_Campos;
+    public static String _Label_FLD1;
+    public static String _Label_FLD2;
+    public static String _Title_Campos;
+    public static String _Btn_Acept;
+    public static String _HowI_C;
+    public static String _Leng;
+    public static String _Leng_fld;
+    public static String _Btn_newFld;
+    public static String _Empty_fld;
+    public static String _createField;
+    public static String _Policy;
+    public static String _Label_Recomend;
+            
+
+    public static void Readlang(String Lang){
+        try {
+            InputStream input = PreCarga.class.getResourceAsStream("/Languages/"+Lang+".properties");
+            //BufferedReader input = new BufferedReader(new InputStreamReader(new FileInputStream("/Languages/"+Lang+".properties"),"UTF-8")); 
+            
+            Properties props = new Properties();
+            props.load(input);
+            _Menu_HowTo = props.getProperty("Menu_HowTo");
+            _Menu_Config = props.getProperty("Menu_Config");
+            _Menu_About = props.getProperty("Menu_About");
+            _Pestanas_0 = props.getProperty("Pestanas_0");
+            _Pestanas_1 = props.getProperty("Pestanas_1");
+            _Button_Load = props.getProperty("Button_Load");
+            _B_Refresh = props.getProperty("B_Refresh");
+            _Label_Trans = props.getProperty("Label_Trans");
+            _Label_Orig = props.getProperty("Label_Orig");
+            _Label_Language = props.getProperty("Label_Language");
+            _Label_Type = props.getProperty("Label_Type");
+            _Label_Colour = props.getProperty("Label_Colour");
+            _L_Amount = props.getProperty("L_Amount");
+            _Check_Show = props.getProperty("Check_Show");
+            _Title_Config = props.getProperty("Title_Config");
+            _Label_CTittle = props.getProperty("Label_CTittle");
+            _Label_Mostrar = props.getProperty("Label_Mostrar");
+            _Label_CIdioma = props.getProperty("Label_CIdioma");
+            _Label_CType = props.getProperty("Label_CType");
+            _Label_CColour = props.getProperty("Label_CColour");
+            _B_Accept = props.getProperty("B_Accept");
+            _Idioma0 = props.getProperty("Idioma1");
+            _Idioma1 = props.getProperty("Idioma2");
+            _Idioma2 = props.getProperty("Idioma3");
+            _Idioma3 = props.getProperty("Idioma4");
+            _About = props.getProperty("About");
+            _B_Search = props.getProperty("B_Search");
+            _L_DeckFields = props.getProperty("L_DeckFields");
+            _Label_CType1 = props.getProperty("Label_Type");
+            _Label_CColour1 = props.getProperty("Label_Colour");
+            _Label_CIdioma1 = props.getProperty("Label_CIdioma");
+            _Label_Mostrar = props.getProperty("Label_Mostrar");
+            _CType0 = props.getProperty("CType0");
+            _CType1 = props.getProperty("CType1");
+            _CType2 = props.getProperty("CType2");
+            _CType3 = props.getProperty("CType3");
+            _CColour0 = props.getProperty("CColour0");
+            _CColour1 = props.getProperty("CColour1");
+            _Cidioma0 = props.getProperty("Cidioma0");
+            _Cidioma0 = props.getProperty("Cidioma0");
+            _Cidioma1 = props.getProperty("Cidioma1");
+            _Cidioma2 = props.getProperty("Cidioma2");
+            _Cidioma3 = props.getProperty("Cidioma3");
+            _Cidioma4 = props.getProperty("Cidioma4");
+            _Cidioma5 = props.getProperty("Cidioma5");
+            _Cidioma6 = props.getProperty("Cidioma6");
+            _Texto0 = props.getProperty("Texto0");
+            _Texto1 = props.getProperty("Texto1");
+            _Texto1_1 = props.getProperty("Texto1_1");
+            _Texto2 = props.getProperty("Texto2");
+            _Texto3_1 = props.getProperty("Texto3_1");
+            _Texto3_2 = props.getProperty("Texto3_2");
+            _Texto4_1 = props.getProperty("Texto4_1");
+            _Texto4_2 = props.getProperty("Texto4_2");
+            _Texto5_1 = props.getProperty("Texto5_1");
+            _Texto5_2 = props.getProperty("Texto5_2");
+            _About = props.getProperty("About");
+            _Title_Search = props.getProperty("Title_Search");
+            _Ch_Descarga = props.getProperty("Ch_Descarga"); //N
+            _T_Guardar = props.getProperty("T_Guardar"); //N
+            _Body_Err = props.getProperty("Body_Err"); //N
+            _T_Abrir = props.getProperty("T_Abrir");
+            _Alert1 = props.getProperty("Alert1");
+            _Alert2 = props.getProperty("Alert2");
+            _L_Pestanas_0 = props.getProperty("L_Pestanas_0");
+            _L_Pestanas_1 = props.getProperty("L_Pestanas_1");
+            _T_Content = props.getProperty("T_Content");
+            _Browser1 = props.getProperty("Browser1");
+            _Browser2 = props.getProperty("Browser2");
+            _Report = props.getProperty("Report");
+            _Cancel = props.getProperty("Cancel");
+            _Update = props.getProperty("Update");
+            _Ava = props.getProperty("Ava");
+            _New = props.getProperty("New");
+            _BrowserT = props.getProperty("BrowserT");
+            _BrowserCB = props.getProperty("BrowserCB");
+            _Title_Campos = props.getProperty("Title_Campos");
+            _Btn_Campos = props.getProperty("Btn_Campos");
+            _Label_Campos = props.getProperty("Label_Campos");
+            _Label_FLD1 = props.getProperty("Label_FLD1");
+            _Label_FLD2 = props.getProperty("Label_FLD2");
+            _Btn_Acept = props.getProperty("Btn_Acept");
+            _HowI = props.getProperty("HowI");
+            _HowI_C = props.getProperty("HowI_C");
+            _Leng = props.getProperty("Leng");
+            _Leng_fld = props.getProperty("Leng_fld");
+            _Btn_newFld = props.getProperty("Btn_newFld");
+            _Empty_fld = props.getProperty("Empty_fld");
+            _createField = props.getProperty("createField");
+            _Policy = props.getProperty("Policy");
+            _Label_Recomend = props.getProperty("Label_Recomend");
+        } catch (Exception e) {
+            danki.Log.write(String.valueOf("Metodo  Read"),e);
+        }
+    }
+    
+}
